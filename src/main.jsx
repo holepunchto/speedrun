@@ -20,20 +20,26 @@ updates((update) => {
   setTimeout(() => Pear.restart(), 5000)
 })
 
+const barHeight = '44px'
+
 const bar = {
   WebkitAppRegion: 'drag',
   position: 'fixed',
+  inset: '0 0 auto 0',
   zIndex: 2,
-  height: '1.2em',
-  width: '100%'
+  height: barHeight,
+  display: 'flex',
+  alignItems: 'center',
+  paddingInline: '12px',
+  borderBottom: '1px solid rgba(255,255,255,0.2)'
 }
 
 function App () {
-  return (<div>
+  return (<div style={{paddingTop: barHeight}}>
     <div style={bar}>
       <pear-ctrl></pear-ctrl>
     </div>
-    <h1 style={{paddingTop: '.75em', paddingLeft: '.35em'}}>Hello Pear Peer!</h1>
+    <h1>Hello Pear Peer!</h1>
   </div>)
 }
 
