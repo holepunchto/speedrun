@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "esbuild src/main.jsx --bundle --format=esm --packages=external --outfile=dist/bundle.js",
+    "dev": "npm run build -- --watch & pear run -d .",
     "prestage": "npm i && npm run build && npm prune --omit=dev"
   },
   "pear": {

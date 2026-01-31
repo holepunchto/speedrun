@@ -1,6 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import updates from 'pear-updates'
+import { height as titleBarHeight, TitleBar } from './title-bar.jsx'
 
 const REGULATE = 500
 const WAIT = 100
@@ -20,20 +21,10 @@ updates((update) => {
   setTimeout(() => Pear.restart(), 5000)
 })
 
-const bar = {
-  WebkitAppRegion: 'drag',
-  position: 'fixed',
-  zIndex: 2,
-  height: '1.2em',
-  width: '100%'
-}
-
 function App () {
-  return (<div>
-    <div style={bar}>
-      <pear-ctrl></pear-ctrl>
-    </div>
-    <h1 style={{paddingTop: '.75em', paddingLeft: '.35em'}}>Hello Pear Peer!</h1>
+  return (<div style={{paddingTop: titleBarHeight}}>
+    <TitleBar />
+    <h1>Hello Pear Peer!</h1>
   </div>)
 }
 
