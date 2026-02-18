@@ -14,4 +14,4 @@ const pipe = await runtime.start({ bridge })
 
 pipe.on('end', () => Pear.exit())
 
-export const isWindows = process.platform === 'win32'
+export const isWindows = process.platform !== 'win32'

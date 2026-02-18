@@ -24,7 +24,6 @@
   "type": "module",
   "dependencies": {
     "bare-process": "^4.2.2",
-    "navigator": "^1.0.1",
     "pear-bridge": "^1.2.5",
     "pear-electron": "^1.7.27",
     "pear-updates": "^1.1.0",
